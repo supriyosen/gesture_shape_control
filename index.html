@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Control Particles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/gesture_shape_control/assets/index-Dkz-fMV2.js"></script>
+  <link rel="stylesheet" crossorigin href="/gesture_shape_control/assets/index-DDODat4G.css">
+</head>
+
+<body>
+    <!-- UI Overlay for Instructions and Status -->
+    <div id="ui"
+        style="position: absolute; top: 40px; left: 40px; color: rgba(255, 255, 255, 0.9); font-family: 'Space Mono', monospace; font-size: 20px; pointer-events: none; user-select: none; z-index: 100; text-shadow: 0 0 10px rgba(0,255,255,0.5);">
+        <div
+            style="border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.4); padding: 15px 25px; border-radius: 8px; backdrop-filter: blur(4px);">
+            <div>&gt; shape :: <span id="shape-name" style="color: #00ffff; font-weight: bold;">sphere</span></div>
+            <div style="font-size: 12px; opacity: 0.7; margin-top: 10px; line-height: 1.6;">
+                [ 🖐️ OPEN HAND ] to switch shape<br>
+                [ 🤏 L - GESTURE ] pinch to scale & rotate
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Button Overlay -->
+    <div id="start-overlay"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.5s;">
+        <h1 style="color: white; font-family: 'Space Mono', monospace; margin-bottom: 20px;">Hand Control Particles</h1>
+        <button id="start-btn"
+            style="background: #00ffff; color: #000; border: none; padding: 15px 40px; font-size: 18px; font-family: 'Space Mono', monospace; cursor: pointer; border-radius: 4px; font-weight: bold;">START
+            EXPERIENCE</button>
+        <p style="color: rgba(255,255,255,0.5); margin-top: 15px; font-family: sans-serif; font-size: 14px;">Camera
+            access required</p>
+    </div>
+
+    <div id="app"></div>
+</body>
+
+</html>
