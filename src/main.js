@@ -67,7 +67,8 @@ const init = async () => {
         } catch (e) {
             startBtn.innerText = "Camera Failed";
             startBtn.style.background = "red";
-            alert("Could not access camera. Please allow permissions and refresh.");
+            startBtn.disabled = false;
+            alert(`Camera Error: ${e.message}\nPlease allow camera permissions and refresh.`);
             console.error(e);
         }
     });
